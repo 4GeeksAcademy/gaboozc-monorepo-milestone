@@ -1,0 +1,62 @@
+/* ═══════════════════════════════════════════════════════
+   ALPHADEV STUDIOS — Effects: shadows, motion, textures
+   Restrained, warm, editorial. Gold-tinted shadows.
+═══════════════════════════════════════════════════════ */
+
+:root {
+  /* ─── Shadows — soft, warm-tinted ────────────────────── */
+  --shadow-xs:   0 1px 4px rgba(26, 21, 18, 0.04);
+  --shadow-sm:   0 2px 24px rgba(26, 21, 18, 0.06),
+                 0 1px 4px rgba(26, 21, 18, 0.04);
+  --shadow-md:   0 4px 20px rgba(154, 114, 53, 0.10);
+  --shadow-lg:   0 8px 32px rgba(154, 114, 53, 0.10);
+  --shadow-gold: 0 8px 28px rgba(154, 114, 53, 0.32),
+                 0 0 0 4px rgba(154, 114, 53, 0.10);
+  --focus-ring:  0 0 0 3px rgba(154, 114, 53, 0.10);
+
+  /* ─── Motion — calm, premium easing (signature ease-out) ─── */
+  --ease-out:     cubic-bezier(0.16, 1, 0.3, 1); /* @kind other */
+  --ease-smooth:  cubic-bezier(0.4, 0, 0.2, 1);  /* @kind other */
+  --dur-fast:     0.2s;  /* @kind other */
+  --dur-base:     0.25s; /* @kind other */
+  --dur-slow:     0.35s; /* @kind other */
+
+  /* ─── Backdrop blur (frosted glass nav) ──────────────── */
+  --blur-glass:   blur(20px); /* @kind other */
+
+  /* ─── Textures (grain strength + dot-grid) ────────────── */
+  --grain-opacity: 0.028; /* @kind other */
+  --dot-grid:      radial-gradient(circle, rgba(154, 114, 53, 0.12) 1px, transparent 1px); /* @kind other */
+  --dot-grid-size: 28px 28px;
+}
+
+/* ─── Film-grain overlay ──────────────────────────────────
+   Apply by adding class `grain-overlay` to a full-bleed fixed
+   layer, or rely on the html::after hook in the demo pages.   */
+.grain-overlay::after,
+.grain-overlay {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+  opacity: var(--grain-opacity);
+  mix-blend-mode: multiply;
+}
+
+/* ─── Gold divider — the brand's signature flourish ──────── */
+.gold-divider {
+  width: 3rem;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold-500), transparent);
+  margin: 1.25rem auto;
+  border: 0;
+}
+
+/* ─── Dot-grid background utility ─────────────────────────── */
+.bg-dot-grid {
+  background-image: var(--dot-grid);
+  background-size: var(--dot-grid-size);
+}

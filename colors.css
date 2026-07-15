@@ -1,0 +1,65 @@
+/* ═══════════════════════════════════════════════════════
+   ALPHADEV STUDIOS — Color Tokens
+   "Light Luxury" — Warm Cream + Gold editorial palette.
+   Base values first, semantic aliases below.
+═══════════════════════════════════════════════════════ */
+
+:root {
+  color-scheme: light;
+
+  /* ─── Base ramp — Warm Cream ─────────────────────────── */
+  --cream-50:   #FFFFFF; /* pure white — cards */
+  --cream-100:  #FAFAF7; /* page background */
+  --cream-200:  #F2EEE7; /* alt sections */
+  --cream-300:  #E8E2D9; /* deep / borders */
+
+  /* ─── Base ramp — Ink (warm charcoal) ────────────────── */
+  --ink-900:    #1A1512; /* primary text / dark surfaces */
+  --ink-700:    #3A322B; /* heading on light */
+  --ink-500:    #6B5F52; /* muted text */
+  --ink-300:    #9A8E84; /* subtle text */
+
+  /* ─── Base ramp — Gold (the single accent) ───────────── */
+  --gold-700:   #7A5828; /* gold dark — pressed / borders */
+  --gold-500:   #9A7235; /* gold — primary accent */
+  --gold-300:   #C9A465; /* gold light — highlights, glints */
+  --gold-100:   #F5E6CC; /* gold paper — tints */
+
+  /* Gold transparencies (for tints, glows, focus rings) */
+  --gold-bg:      rgba(154, 114, 53, 0.08);
+  --gold-border:  rgba(154, 114, 53, 0.20);
+  --gold-ring:    rgba(154, 114, 53, 0.10);
+
+  /* ─── Semantic — surfaces ────────────────────────────── */
+  --surface-page:    var(--cream-100);
+  --surface-alt:     var(--cream-200);
+  --surface-deep:    var(--cream-300);
+  --surface-card:    var(--cream-50);
+  --surface-invert:  var(--ink-900);   /* dark CTA / footer panels */
+
+  /* ─── Semantic — text ────────────────────────────────── */
+  --text-primary:    var(--ink-900);
+  --text-heading:    var(--ink-900);
+  --text-muted:      var(--ink-500);
+  --text-subtle:     var(--ink-300);
+  --text-on-gold:    var(--cream-100);
+  --text-on-invert:  #FAF7F2;
+  --text-accent:     var(--gold-500);
+
+  /* ─── Semantic — borders & lines ─────────────────────── */
+  --border:          var(--cream-300);
+  --border-hover:    var(--gold-border);
+  --divider:         var(--cream-300);
+
+  /* ─── Semantic — interactive (gold accent) ───────────── */
+  --accent:          var(--gold-500);
+  --accent-hover:    var(--gold-700);
+  --accent-tint:     var(--gold-bg);
+  --accent-glint:    var(--gold-300);
+
+  /* ─── Legacy brand (pre-rebrand tech identity) ───────── */
+  /* Retained for reference only. Do NOT use in new work —
+     the brand has fully moved to the warm cream + gold system. */
+  --legacy-blue:     #0080FF;
+  --legacy-ink:      #0F172A;
+}
