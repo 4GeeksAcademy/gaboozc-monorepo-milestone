@@ -28,6 +28,19 @@ This repository is the **starter template** for transversal projects. You will w
 5. **Start implementing** in the right folder — do not dump everything in the root.
 6. **Document** what you add: each new app, service, agent, or pipeline gets a subfolder + README.
 
+## Run locally (Codespaces)
+
+Use this command from the repository root to serve the static pages:
+
+```bash
+npx --yes serve .
+```
+
+Then open the forwarded URL and visit:
+
+- `index.html` (landing page)
+- `application.html` (application form)
+
 ---
 
 ## How to think about this monorepo

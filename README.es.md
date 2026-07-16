@@ -28,6 +28,19 @@ Este repositorio es la **plantilla de inicio** para los proyectos transversales.
 5. **Empieza a implementar** en la carpeta correcta — no tires todo en la raíz.
 6. **Documenta** lo que añadas: cada app, servicio, agente o pipeline nuevo lleva subcarpeta + README.
 
+## Ejecutar localmente (Codespaces)
+
+Usa este comando desde la raiz del repositorio para servir las paginas estaticas:
+
+```bash
+npx --yes serve .
+```
+
+Luego abre la URL reenviada y visita:
+
+- `index.html` (landing page)
+- `application.html` (formulario de aplicacion)
+
 ---
 
 ## Cómo entender este monorepo

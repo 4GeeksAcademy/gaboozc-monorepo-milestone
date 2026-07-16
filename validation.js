@@ -100,8 +100,8 @@ function setFieldError(fieldName, message) {
 
   if (inputNode) {
     inputNode.setAttribute("aria-invalid", message ? "true" : "false");
-    inputNode.classList.toggle("border-red-400", Boolean(message));
-    inputNode.classList.toggle("border-white/15", !message);
+    inputNode.classList.toggle("border-red-500", Boolean(message));
+    inputNode.classList.toggle("border-amber/30", !message);
   }
 }
 
@@ -119,12 +119,12 @@ function validateServices() {
 }
 
 function setAlert(type, message) {
-  alertBox.classList.remove("hidden", "border-red-400", "bg-red-500/10", "text-red-100", "border-emerald-400", "bg-emerald-500/10", "text-emerald-100");
+  alertBox.classList.remove("hidden", "border-red-300", "bg-red-50", "text-red-700", "border-emerald-300", "bg-emerald-50", "text-emerald-700");
 
   if (type === "error") {
-    alertBox.classList.add("border-red-400", "bg-red-500/10", "text-red-100");
+    alertBox.classList.add("border-red-300", "bg-red-50", "text-red-700");
   } else {
-    alertBox.classList.add("border-emerald-400", "bg-emerald-500/10", "text-emerald-100");
+    alertBox.classList.add("border-emerald-300", "bg-emerald-50", "text-emerald-700");
   }
 
   alertBox.textContent = message;
@@ -227,6 +227,16 @@ if (form) {
     });
     getInputFields().forEach((fieldName) => setFieldError(fieldName, ""));
     document.getElementById("services-error").textContent = "";
+  });
+
+  form.addEventListener("reset", () => {
+    setTimeout(() => {
+      getInputFields().forEach((fieldName) => setFieldError(fieldName, ""));
+      document.getElementById("services-error").textContent = "";
+      alertBox.classList.add("hidden");
+      alertBox.textContent = "";
+      updateBudgetHint();
+    }, 0);
   });
 
   updateBudgetHint();
