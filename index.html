@@ -96,6 +96,13 @@
           >Start Your Application</a
         >
       </nav>
+      <div class="mx-auto max-w-6xl px-6 pb-4 md:hidden">
+        <ul class="flex flex-wrap gap-3 text-sm font-semibold" role="list" aria-label="Mobile section navigation">
+          <li><a href="#solutions" class="rounded-full border border-ink/20 px-3 py-1.5 hover:border-cyan hover:text-cyan">Solutions</a></li>
+          <li><a href="#why-us" class="rounded-full border border-ink/20 px-3 py-1.5 hover:border-cyan hover:text-cyan">Why Us</a></li>
+          <li><a href="#contact" class="rounded-full border border-ink/20 px-3 py-1.5 hover:border-cyan hover:text-cyan">Contact</a></li>
+        </ul>
+      </div>
 
       <section class="mx-auto grid max-w-6xl gap-10 px-6 pb-20 pt-12 lg:grid-cols-[1.2fr_1fr] lg:items-center" aria-labelledby="hero-title">
         <div>
@@ -207,10 +214,15 @@
 
     <footer class="border-t border-cyan/20">
       <div class="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-8 text-sm text-ink/70 md:flex-row md:items-center md:justify-between">
-        <p class="inline-flex items-center gap-3">
+        <div class="inline-flex flex-col gap-2">
+          <p class="inline-flex items-center gap-3">
           <img src="Assets/footer-logo.png" alt="AlphaDev Studios footer logo" class="h-7 w-auto object-contain" />
           <span>&copy; 2026 AlphaDev Studios. All rights reserved.</span>
-        </p>
+          </p>
+          <p class="text-xs text-ink/70">
+            Contact: hello@alphadevstudios.com | WhatsApp: +52 55 0000 0000
+          </p>
+        </div>
         <ul class="flex gap-6" role="list">
           <li><a class="hover:text-cyan" href="index.html">Home</a></li>
           <li><a class="hover:text-cyan" href="application.html">Application</a></li>
